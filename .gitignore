@@ -1,0 +1,10 @@
+autom4te.cache
+.deps
+.libs
+**/*.la
+**/*.l0
+**/*.o
+**/*~
+config.h
+stamp-h
+stamp-h1
