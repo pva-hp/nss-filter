@@ -1,26 +1,39 @@
-pagead2[.]googlesyndication[.]com
-googleads[.]g[.]doubleclick[.]net
-big[.]g[.]doubleclick[.]net
-adservice[.]google[.]com
+# Comments  starts with  hash symbol  and  ends with  EOL.  Each  line
+# containing  non-space characters  represents  a  single GNU  regular
+# expression.  Leading and  trailing spaces of the  expression are not
+# taken into account.
 
-an[.]yandex[.]net
-an[.]yandex[.]ru
-avatars[.]mds[.]yandex[.]net
-avatars[.]mds[.]yandex[.]ru
-csp[.]yandex[.]net
-csp[.]yandex[.]ru
-ext-strm-stdrt16[.]strm[.]yandex[.]net
-ext-strm-stdrt16[.]strm[.]yandex[.]ru
-log[.]stm[.]yandex[.]net
-log[.]stm[.]yandex[.]ru
-mc[.]yandex[.]net
-mc[.]yandex[.]ru
-storage[.]mds[.]yandex[.]net
-storage[.]mds[.]yandex[.]ru
-yabs[.]yandex[.]net
-yabs[.]yandex[.]ru
-zen[.]yandex[.]net
-zen[.]yandex[.]ru
+# Here we disable set of google ad services:
 
+# pagead2.googlesyndication.com
+# googleads.g.doubleclick.net
+# big.g.doubleclick.net
+# adservice.google.com
 
+pagead2[.]googlesyndication[.](com|net)$
+(beg|googleads)[.]g[.]doubleclick[.](com|net)$
+adservice[.]google[.](com|net)$
 
+# Here we remove some boring yandex services:
+
+# an.yandex.net
+# an.yandex.ru
+# avatars.mds.yandex.net
+# avatars.mds.yandex.ru
+# csp.yandex.net
+# csp.yandex.ru
+# ext-strm-stdrt16.strm.yandex.net
+# ext-strm-stdrt16.strm.yandex.ru
+# log.stm.yandex.net
+# log.stm.yandex.ru
+# mc.yandex.net
+# mc.yandex.ru
+# storage.mds.yandex.net
+# storage.mds.yandex.ru
+# yabs.yandex.net
+# yabs.yandex.ru
+# zen.yandex.net
+# zen.yandex.ru
+
+(mds|csp|an|strm|stm|bs|mc|mds|yabs)[.](yandex|ya)[.](net|ru)$
+zen[.]yandex[.](net|ru)$

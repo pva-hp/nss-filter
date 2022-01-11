@@ -1,0 +1,25 @@
+  This  is  NSS-based DNS  filter  for  blacklisting site  names  with
+regular expressions.  It can be set  up as system wide and/or personal
+filter  for  improving your  security  and  resisting to  adversiting.
+Remember that  while disabling some  internet names you  are disabling
+some features of internet software.
+
+  To set  system-wide filter  put `hosts.blacklist' file  into `/etc/'
+folder.  To  set your personal  filter (recomended) put the  file into
+your ~/.config folder. In later case  you can change the filter on the
+fly (between internet queries).  Actual  filter is made of all regular
+expressions from both system-wide and personal lists.
+
+  Sample  hosts.blacklist file  appears in  `$prefix/share/nss-filter'
+folder after installing where prefix is usually `/usr'.
+
+  Note to  adversiting resisters:  It is not  enough to  just blocking
+some (or most) internet names  to minimize adversiting.  Most internet
+sites starts to  load CPU with cycle enumerating  (or even generating)
+adversiting internet URIs.  Blocking  with template matching all these
+URIs works with  a cost of wasting processor time.   So combining this
+method with script blockers is better choice.
+
+  Note  to all:  this  is rather  a GNU-Licensed  toy  then a  serious
+defense tool. NO WARRANTY  IS GIVEN ON WHAT IS EVEN  WORKS.  USE IT AT
+YOUR OWN RISK. And ... enjoy!  I will be happy if it helps you.
