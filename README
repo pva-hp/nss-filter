@@ -4,11 +4,17 @@ filter  for  improving your  security  and  resisting to  adversiting.
 Remember that  while disabling some  internet names you  are disabling
 some features of internet software.
 
+  To enable the  filter module in NSS add `filter'  entry before `dns'
+into hosts setting of`/etc/nsswitch.conf' like this:
+
+hosts: files mymachines myhostname resolve filter [!UNAVAIL=return] dns
+                                           ^^^^^^
+
   To set  system-wide filter  put `hosts.blacklist' file  into `/etc/'
 folder.  To  set your personal  filter (recomended) put the  file into
-your ~/.config folder. In later case  you can change the filter on the
-fly (between internet queries).  Actual  filter is made of all regular
-expressions from both system-wide and personal lists.
+your `~/.config  folder'. In later case  you can change the  filter on
+the  fly (between  internet queries).   Actual filter  is made  of all
+regular expressions from both system-wide and personal lists.
 
   Sample  hosts.blacklist file  appears in  `$prefix/share/nss-filter'
 folder after installing where prefix is usually `/usr'.
